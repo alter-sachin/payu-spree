@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   get '/static/about', to: 'static#about',as:"about"
   get '/static/contact', to: 'static#contact',as:"contact"
 
+   post '/payu', :to => "payu#index", :as => :payu_proceed
+  post '/payu/confirm', :to => "payu#confirm", :as => :payu_confirm
+  post '/payu/cancel', :to => "payu#cancel", :as => :payu_cancel
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
